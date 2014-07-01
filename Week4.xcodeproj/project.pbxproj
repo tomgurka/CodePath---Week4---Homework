@@ -19,6 +19,8 @@
 		E24D0F49195D39E100F4C04A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E24D0F31195D39E100F4C04A /* UIKit.framework */; };
 		E24D0F51195D39E100F4C04A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E24D0F4F195D39E100F4C04A /* InfoPlist.strings */; };
 		E24D0F53195D39E100F4C04A /* Week4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = E24D0F52195D39E100F4C04A /* Week4Tests.m */; };
+		E24D0F5F195D39FD00F4C04A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E24D0F5D195D39FD00F4C04A /* MainViewController.m */; };
+		E24D0F60195D39FD00F4C04A /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E24D0F5E195D39FD00F4C04A /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		E24D0F4E195D39E100F4C04A /* Week4Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Week4Tests-Info.plist"; sourceTree = "<group>"; };
 		E24D0F50195D39E100F4C04A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E24D0F52195D39E100F4C04A /* Week4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Week4Tests.m; sourceTree = "<group>"; };
+		E24D0F5C195D39FD00F4C04A /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		E24D0F5D195D39FD00F4C04A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		E24D0F5E195D39FD00F4C04A /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,7 @@
 		E24D0F33195D39E100F4C04A /* Week4 */ = {
 			isa = PBXGroup;
 			children = (
+				E24D0F61195D3A1000F4C04A /* View Controllers */,
 				E24D0F3C195D39E100F4C04A /* AppDelegate.h */,
 				E24D0F3D195D39E100F4C04A /* AppDelegate.m */,
 				E24D0F3F195D39E100F4C04A /* Images.xcassets */,
@@ -142,6 +148,17 @@
 				E24D0F4F195D39E100F4C04A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E24D0F61195D3A1000F4C04A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E24D0F5C195D39FD00F4C04A /* MainViewController.h */,
+				E24D0F5D195D39FD00F4C04A /* MainViewController.m */,
+				E24D0F5E195D39FD00F4C04A /* MainViewController.xib */,
+			);
+			name = "View Controllers";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24D0F38195D39E100F4C04A /* InfoPlist.strings in Resources */,
+				E24D0F60195D39FD00F4C04A /* MainViewController.xib in Resources */,
 				E24D0F40195D39E100F4C04A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24D0F3E195D39E100F4C04A /* AppDelegate.m in Sources */,
+				E24D0F5F195D39FD00F4C04A /* MainViewController.m in Sources */,
 				E24D0F3A195D39E100F4C04A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
