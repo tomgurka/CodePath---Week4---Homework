@@ -28,6 +28,9 @@
 //Container Center
 @property (assign,nonatomic) CGPoint originalCenter;
 
+//Pincher
+@property (strong,nonatomic) UIPinchGestureRecognizer *pinchGesture;
+
 
 @end
 
@@ -87,10 +90,13 @@
         self.createdImageView = [[UIImageView alloc] init];
         self.createdImageView.image = originalImageView.image;
         //self.createdImageView.backgroundColor = [UIColor redColor];
-        self.createdImageView.frame = CGRectMake(location.x,location.y,originalImageView.frame.size.width, originalImageView.frame.size.height);
+        self.createdImageView.frame = CGRectMake(location.x,location.y,originalImageView.frame.size.width *5, originalImageView.frame.size.height *5);
         
         //Add The pincher!
-        [self.createdImageView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(onViewPan:)]];
+        
+        [self.createdImageView addGestureRecognizer:[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(stickerScale:)]];
+        
+        NSLog(@"scaling Addded ..");
     
         
         [self.view addSubview:self.createdImageView];
@@ -157,6 +163,23 @@
     }
 }
 
+- (void)stickerScale:(UIPinchGestureRecognizer *)pinchGesture {
+    NSLog(@"pinching sticker");
+    
+    // use the scale of the pinchGesture
+    CGFloat scale = pinchGesture.scale;
+    
+    
+    if(pinchGesture.state == UIGestureRecognizerStateChanged) {
+        
+        pinchGesture.view.transform = CGAffineTransformMakeScale(scale, scale);
+        
+        
+    } if (pinchGesture.state == UIGestureRecognizerStateEnded) {
+        
+    }
+    
+}
 
 
 @end
